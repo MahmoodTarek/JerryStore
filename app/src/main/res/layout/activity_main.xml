@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_blue"
+        android:paddingHorizontal="@dimen/marginMediumLarge"
+        android:paddingTop="40dp"
+        android:paddingBottom="@dimen/marginSmall">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/marginVerySmall"
+            android:contentDescription="@string/profile_picture"
+            android:src="@drawable/img_profile_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginSmallMedium"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:fontFamily="@font/ibmplex_medium"
+            android:text="@string/welcomeMessage"
+            android:textColor="@color/eerie_black"
+            android:textSize="@dimen/textSmall"
+            app:layout_constraintBottom_toTopOf="@id/title_message"
+            app:layout_constraintStart_toEndOf="@id/profile_picture"
+            app:layout_constraintTop_toTopOf="@id/profile_picture" />
+
+        <TextView
+            android:id="@+id/title_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibmplex_regular"
+            android:text="@string/titleMessage"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textVerySmall"
+            app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+            app:layout_constraintStart_toStartOf="@id/welcome_message"
+            app:layout_constraintTop_toBottomOf="@id/welcome_message" />
+
+        <ImageView
+            android:id="@+id/ic_notifications"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/profile_picture"
+            android:src="@drawable/ic_notifications"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_picture" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginMedium"
+            android:layout_marginEnd="@dimen/marginSmallMedium"
+            android:autofillHints="username"
+            android:background="@drawable/bg_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/marginSmallMedium"
+            android:drawableTint="@color/gray"
+            android:hint="@string/search_about_tom"
+            android:inputType="text"
+            android:padding="@dimen/marginMedium"
+            app:layout_constraintEnd_toStartOf="@+id/ic_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_picture" />
+
+        <ImageButton
+            android:id="@+id/ic_filter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/marginSmallMedium"
+            android:contentDescription="@string/profile_picture"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintBottom_toBottomOf="@id/search_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/offer_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLarge"
+            android:background="@drawable/bg_offer_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+            <TextView
+                android:id="@+id/offer_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMedium"
+                android:layout_marginTop="@dimen/marginMedium"
+                android:fontFamily="@font/ibmplex_semi_bold"
+                android:text="@string/offerContent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textMediumSmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/offer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginSmallMedium"
+                android:layout_marginBottom="@dimen/marginMedium"
+                android:alpha="0.8"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/offer_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textVerySmall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/offer_content"
+                app:layout_constraintTop_toBottomOf="@id/offer_content" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="92dp"
+                android:layout_marginEnd="-18dp"
+                android:rotation="328"
+                android:scaleType="fitXY"
+                android:src="@drawable/tom_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="92dp"
+                android:layout_marginEnd="-20dp"
+                android:rotation="328"
+                android:scaleType="fitXY"
+                android:src="@drawable/tom_background2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_tom_offer"
+            app:layout_constraintBottom_toBottomOf="@+id/offer_card"
+            app:layout_constraintEnd_toEndOf="@+id/offer_card" />
+
+        <TextView
+            android:id="@+id/tx_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLarge"
+            android:fontFamily="@font/ibmplex_semi_bold"
+            android:text="@string/sectionTitle"
+            android:textColor="@color/eerie_black"
+            android:textSize="@dimen/textMediumLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/offer_card" />
+
+        <TextView
+            android:id="@+id/tx_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/marginSmall"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/ibmplex_medium"
+            android:text="@string/viewAll"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/textVerySmall"
+            app:layout_constraintBaseline_toBaselineOf="@id/tx_section"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_section"
+            app:layout_constraintEnd_toStartOf="@id/ic_view_all"
+            app:layout_constraintTop_toTopOf="@+id/tx_section" />
+
+        <ImageView
+            android:id="@+id/ic_view_all"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_arrow_view_all"
+            app:layout_constraintBottom_toBottomOf="@+id/tx_view_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tx_view_all" />
+
+        <GridLayout
+            android:id="@+id/tom_cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginVeryLarge"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:useDefaultMargins="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tx_section" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

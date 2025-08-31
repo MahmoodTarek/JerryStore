@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Jerry Store</string>
+    <string name="profile_picture">profile Picture</string>
+    <string name="welcomeMessage">Hi, Jerry 👋🏻</string>
+    <string name="titleMessage">Which Tom do you want to buy?</string>
+    <string name="search_about_tom">Search about tom ...</string>
+    <string name="offerContent">Buy 1 Tom and get 2 for free</string>
+    <string name="offer_title">Adopt Tom! (Free Fail-Free \n Guarantee)</string>
+    <string name="sectionTitle">Cheap tom section</string>
+    <string name="viewAll">View all</string>
+    <string name="sport_tom">Sport Tom</string>
+    <string name="sportDescription">He runs 1 meter... trips over his boot.</string>
+</resources>
