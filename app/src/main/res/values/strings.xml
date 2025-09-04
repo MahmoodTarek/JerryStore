@@ -10,4 +10,8 @@
     <string name="viewAll">View all</string>
     <string name="sport_tom">Sport Tom</string>
     <string name="sportDescription">He runs 1 meter... trips over his boot.</string>
+    <string name="_10_cheeses">10 cheeses</string>
+    <string name="_12_cheeses">12 cheeses</string>
+    <string name="_5_cheeses">5 cheeses</string>
+    <string name="_3_cheeses">3 cheeses</string>
 </resources>

@@ -124,7 +124,7 @@
                 android:layout_marginTop="@dimen/marginSmallMedium"
                 android:layout_marginBottom="@dimen/marginMedium"
                 android:alpha="0.8"
-                android:fontFamily="@font/ibmplex_medium"
+                android:fontFamily="@font/ibmplex_regular"
                 android:text="@string/offer_title"
                 android:textColor="@color/white"
                 android:textSize="@dimen/textVerySmall"
@@ -170,7 +170,7 @@
             android:id="@+id/tx_section"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginLarge"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/ibmplex_semi_bold"
             android:text="@string/sectionTitle"
             android:textColor="@color/eerie_black"
@@ -205,17 +205,684 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tx_view_all" />
 
-        <GridLayout
-            android:id="@+id/tom_cards_container"
-            android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginVeryLarge"
-            android:columnCount="2"
-            android:orientation="horizontal"
-            android:useDefaultMargins="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tx_section" />
+            app:layout_constraintTop_toBottomOf="@+id/tx_section">
+
+            <View
+                android:id="@+id/view_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_sport"
+                android:layout_width="97dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_sport"
+                app:layout_constraintStart_toStartOf="@id/view_sport"
+                app:layout_constraintTop_toTopOf="@id/view_sport"
+                app:srcCompat="@drawable/img_tom_sport" />
+
+            <TextView
+                android:id="@+id/title_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Sport Tom"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_sport"
+                app:layout_constraintStart_toStartOf="@id/view_sport"
+                app:layout_constraintTop_toBottomOf="@id/image_sport" />
+
+            <TextView
+                android:id="@+id/desc_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="He runs 1 meter... trips over his boot."
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_sport"
+                app:layout_constraintEnd_toEndOf="@id/title_sport"
+                app:layout_constraintStart_toStartOf="@id/title_sport"
+                app:layout_constraintTop_toBottomOf="@id/title_sport" />
+
+            <ImageView
+                android:id="@+id/btn_add_sport"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/price_bg_sport"
+                app:layout_constraintEnd_toEndOf="@id/view_sport"
+                app:layout_constraintTop_toTopOf="@+id/price_bg_sport"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_sport"
+                android:layout_width="106dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_sport"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_sport"
+                app:layout_constraintStart_toStartOf="@id/view_sport" />
+
+            <ImageView
+                android:id="@+id/money_icon_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_sport"
+                app:layout_constraintStart_toStartOf="@id/price_bg_sport"
+                app:layout_constraintTop_toTopOf="@id/price_bg_sport"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_sport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="3 cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon_sport"
+                app:layout_constraintStart_toEndOf="@id/money_icon_sport"
+                app:layout_constraintTop_toTopOf="@id/money_icon_sport" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2">
+
+            <View
+                android:id="@+id/view_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_lover"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_lover"
+                app:layout_constraintStart_toStartOf="@id/view_lover"
+                app:layout_constraintTop_toTopOf="@id/view_lover"
+                app:srcCompat="@drawable/img_tom_lover" />
+
+            <TextView
+                android:id="@+id/title_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Lover Tom"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_lover"
+                app:layout_constraintStart_toStartOf="@id/view_lover"
+                app:layout_constraintTop_toBottomOf="@id/image_lover" />
+
+            <TextView
+                android:id="@+id/desc_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="He loves one-sidedly... and is beaten by the other side."
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_lover"
+                app:layout_constraintEnd_toEndOf="@id/title_lover"
+                app:layout_constraintStart_toStartOf="@id/title_lover"
+                app:layout_constraintTop_toBottomOf="@id/title_lover" />
+
+            <ImageView
+                android:id="@+id/btn_add_lover"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_lover"
+                app:layout_constraintEnd_toEndOf="@id/view_lover"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_lover"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_lover"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_lover"
+                app:layout_constraintStart_toStartOf="@id/view_lover" />
+
+            <ImageView
+                android:id="@+id/money_icon_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_lover"
+                app:layout_constraintStart_toStartOf="@id/price_bg_lover"
+                app:layout_constraintTop_toTopOf="@id/price_bg_lover"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_lover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/_5_cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon_lover"
+                app:layout_constraintStart_toEndOf="@id/money_icon_lover"
+                app:layout_constraintTop_toTopOf="@id/money_icon_lover" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <View
+                android:id="@+id/view_tom_bomb"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_bomb"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_tom_bomb"
+                app:layout_constraintStart_toStartOf="@id/view_tom_bomb"
+                app:layout_constraintTop_toTopOf="@id/view_tom_bomb"
+                app:srcCompat="@drawable/img_tom_bomb" />
+
+            <TextView
+                android:id="@+id/title_bomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Tom The bomb"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_tom_bomb"
+                app:layout_constraintStart_toStartOf="@id/view_tom_bomb"
+                app:layout_constraintTop_toBottomOf="@id/image_bomb" />
+
+            <TextView
+                android:id="@+id/desc_bomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_regular"
+                android:text="He blows himself up before Jerry can catch him."
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_bomb"
+                app:layout_constraintEnd_toEndOf="@id/title_bomb"
+                app:layout_constraintStart_toStartOf="@id/title_bomb"
+                app:layout_constraintTop_toBottomOf="@id/title_bomb" />
+
+            <ImageView
+                android:id="@+id/btn_add_to_card_bomb"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_tom_bomb"
+                app:layout_constraintEnd_toEndOf="@id/view_tom_bomb"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_bomb"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_tom_bomb"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_to_card_bomb"
+                app:layout_constraintStart_toStartOf="@id/view_tom_bomb" />
+
+            <ImageView
+                android:id="@+id/money_icon_bomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_bomb"
+                app:layout_constraintStart_toStartOf="@id/price_bg_bomb"
+                app:layout_constraintTop_toTopOf="@id/price_bg_bomb"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_bomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginSmall"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/_10_cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/price_bg_bomb"
+                app:layout_constraintStart_toEndOf="@id/money_icon_bomb"
+                app:layout_constraintTop_toTopOf="@+id/price_bg_bomb" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
+
+            <View
+                android:id="@+id/view_spy"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_spy"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_spy"
+                app:layout_constraintStart_toStartOf="@id/view_spy"
+                app:layout_constraintTop_toTopOf="@id/view_spy"
+                app:srcCompat="@drawable/img_tom_spy" />
+
+            <TextView
+                android:id="@+id/title_spy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Spy Tom"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_spy"
+                app:layout_constraintStart_toStartOf="@id/view_spy"
+                app:layout_constraintTop_toBottomOf="@id/image_spy" />
+
+            <TextView
+                android:id="@+id/desc_spy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Disguises itself as a table."
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_spy"
+                app:layout_constraintEnd_toEndOf="@id/title_spy"
+                app:layout_constraintStart_toStartOf="@id/title_spy"
+                app:layout_constraintTop_toBottomOf="@id/title_spy" />
+
+            <ImageView
+                android:id="@+id/btn_add_spy"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_spy"
+                app:layout_constraintEnd_toEndOf="@id/view_spy"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_spy"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_spy"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_spy"
+                app:layout_constraintStart_toStartOf="@id/view_spy" />
+
+            <ImageView
+                android:id="@+id/money_icon_spy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_spy"
+                app:layout_constraintStart_toStartOf="@id/price_bg_spy"
+                app:layout_constraintTop_toTopOf="@id/price_bg_spy"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_spy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/_12_cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon_spy"
+                app:layout_constraintStart_toEndOf="@id/money_icon_spy"
+                app:layout_constraintTop_toTopOf="@id/money_icon_spy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <View
+                android:id="@+id/view_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_frozen"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_frozen"
+                app:layout_constraintStart_toStartOf="@id/view_frozen"
+                app:layout_constraintTop_toTopOf="@id/view_frozen"
+                app:srcCompat="@drawable/img_tom_frozen" />
+
+            <TextView
+                android:id="@+id/title_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Frozen Tom"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_frozen"
+                app:layout_constraintStart_toStartOf="@id/view_frozen"
+                app:layout_constraintTop_toBottomOf="@id/image_frozen" />
+
+            <TextView
+                android:id="@+id/desc_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="He was chasing Jerry, he froze after the first look"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_frozen"
+                app:layout_constraintEnd_toEndOf="@id/title_frozen"
+                app:layout_constraintStart_toStartOf="@id/title_frozen"
+                app:layout_constraintTop_toBottomOf="@id/title_frozen" />
+
+            <ImageView
+                android:id="@+id/btn_add_frozen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_frozen"
+                app:layout_constraintEnd_toEndOf="@id/view_frozen"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_frozen"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_frozen"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_frozen"
+                app:layout_constraintStart_toStartOf="@id/view_frozen" />
+
+            <ImageView
+                android:id="@+id/money_icon_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_frozen"
+                app:layout_constraintStart_toStartOf="@id/price_bg_frozen"
+                app:layout_constraintTop_toTopOf="@id/price_bg_frozen"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/_10_cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon_frozen"
+                app:layout_constraintStart_toEndOf="@id/money_icon_frozen"
+                app:layout_constraintTop_toTopOf="@id/money_icon_frozen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout6">
+
+            <View
+                android:id="@+id/view_sleeping"
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tom_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_sleeping"
+                android:layout_width="93dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="-16dp"
+                app:layout_constraintEnd_toEndOf="@id/view_sleeping"
+                app:layout_constraintStart_toStartOf="@id/view_sleeping"
+                app:layout_constraintTop_toTopOf="@id/view_sleeping"
+                app:srcCompat="@drawable/img_tom_sleeping" />
+
+            <TextView
+                android:id="@+id/title_sleeping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="Sleeping Tom"
+                android:textColor="#1F1F1E"
+                android:textFontWeight="600"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_sleeping"
+                app:layout_constraintStart_toStartOf="@id/view_sleeping"
+                app:layout_constraintTop_toBottomOf="@id/image_sleeping" />
+
+            <TextView
+                android:id="@+id/desc_sleeping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="He doesn't chase anyone, he just snores in stereo."
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/price_text_sleeping"
+                app:layout_constraintEnd_toEndOf="@id/title_sleeping"
+                app:layout_constraintStart_toStartOf="@id/title_sleeping"
+                app:layout_constraintTop_toBottomOf="@id/title_sleeping" />
+
+            <ImageView
+                android:id="@+id/btn_add_sleeping"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_sleeping"
+                app:layout_constraintEnd_toEndOf="@id/view_sleeping"
+                app:srcCompat="@drawable/ic_add_to_card" />
+
+            <View
+                android:id="@+id/price_bg_sleeping"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_price_card"
+                app:layout_constraintBottom_toBottomOf="@id/view_sleeping"
+                app:layout_constraintEnd_toStartOf="@id/btn_add_sleeping"
+                app:layout_constraintStart_toStartOf="@id/view_sleeping" />
+
+            <ImageView
+                android:id="@+id/money_icon_sleeping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="@id/price_bg_sleeping"
+                app:layout_constraintStart_toStartOf="@id/price_bg_sleeping"
+                app:layout_constraintTop_toTopOf="@id/price_bg_sleeping"
+                app:srcCompat="@drawable/ic_money" />
+
+            <TextView
+                android:id="@+id/price_text_sleeping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/ibmplex_medium"
+                android:text="@string/_10_cheeses"
+                android:textAlignment="center"
+                android:textColor="#03578A"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon_sleeping"
+                app:layout_constraintStart_toEndOf="@id/money_icon_sleeping"
+                app:layout_constraintTop_toTopOf="@id/money_icon_sleeping" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
